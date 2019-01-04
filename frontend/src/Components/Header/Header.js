@@ -21,7 +21,8 @@ const colors = [
   "#7d464b"
 ];
 
-const randomInt = max => Math.floor(Math.random() * Math.floor(max));
+const randomInt = max =>
+  Math.floor(Math.random() * (Math.floor(max) - Math.random(max)));
 
 class Header extends Component {
   state = {
@@ -30,31 +31,29 @@ class Header extends Component {
   };
 
   componentDidMount() {
-    const shadow =
-      "0 0 0 #5F6460, 0 3px 3px #AC836B, 0 6px 6px #C5E199, 0 9px 9px #5DC99F, 0 12px 12px #3B6D81, 0 15px 15px #6F677F, 0 18px 18px #812A3A, 0 21px 21px  #79341A, 0 24px 24px #504235";
-    setTimeout(() => this.setState({ shadow }), 10);
+    setTimeout(() => this.reRainbow(), 10);
   }
 
   reRainbow = () => {
-    const shadow = `0 0 0 ${colors[randomInt(colors.length)]}, 0 ${randomInt(
-      3
-    )}px ${randomInt(3)}px ${colors[randomInt(colors.length)]}, 0 ${randomInt(
-      6
-    )}px ${randomInt(6)}px ${colors[randomInt(colors.length)]}, 0 ${randomInt(
-      9
-    )}px ${randomInt(9)}px ${colors[randomInt(colors.length)]}, 0 ${randomInt(
-      12
-    )}px ${randomInt(12)}px ${colors[randomInt(colors.length)]}, 0 ${randomInt(
-      15
-    )}px ${randomInt(15)}px ${colors[randomInt(colors.length)]}, 0 ${randomInt(
-      18
-    )}px ${randomInt(18)}px ${colors[randomInt(colors.length)]}, 0 ${randomInt(
-      21
-    )}px ${randomInt(21)}px  ${colors[randomInt(colors.length)]}, 0 ${randomInt(
-      24
-    )}px ${randomInt(24)}px ${colors[randomInt(colors.length)]}`;
-
-    console.log(shadow);
+    const shadow = `0 0 0 ${colors[randomInt(colors.length)]}, ${randomInt(
+      1
+    )}vw ${randomInt(4)}vw ${randomInt(4)}vw ${
+      colors[randomInt(colors.length)]
+    },${randomInt(2)}vw ${randomInt(8)}vw ${randomInt(8)}vw ${
+      colors[randomInt(colors.length)]
+    },${randomInt(3)}vw ${randomInt(12)}vw ${randomInt(12)}vw ${
+      colors[randomInt(colors.length)]
+    },${randomInt(4)}vw ${randomInt(16)}vw ${randomInt(16)}vw ${
+      colors[randomInt(colors.length)]
+    },${randomInt(5)}vw ${randomInt(20)}vw ${randomInt(20)}vw ${
+      colors[randomInt(colors.length)]
+    },${randomInt(6)}vw ${randomInt(24)}vw ${randomInt(24)}vw ${
+      colors[randomInt(colors.length)]
+    },${randomInt(7)}vw ${randomInt(28)}vw ${randomInt(28)}vw  ${
+      colors[randomInt(colors.length)]
+    },${randomInt(8)}vw ${randomInt(32)}vw ${randomInt(32)}vw ${
+      colors[randomInt(colors.length)]
+    }`;
 
     this.setState({ shadow });
   };
