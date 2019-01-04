@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { messages } from "./data";
 
 import Binkie from "./Binkie";
+import HeaderCont from "./HeaderCont";
 
 const colors = [
   "#5F6460",
@@ -62,7 +63,7 @@ class Header extends Component {
     const { message, shadow } = this.state;
     console.log(shadow);
     return (
-      <header style={{ minHeight: "90vh" }}>
+      <HeaderCont>
         <h2>{message}</h2>
         <Binkie
           style={{ textShadow: shadow }}
@@ -71,7 +72,7 @@ class Header extends Component {
         >
           binkie
         </Binkie>
-      </header>
+      </HeaderCont>
     );
   }
 }
