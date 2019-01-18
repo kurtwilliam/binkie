@@ -9,6 +9,6 @@ const Contact = styled.p`
   font-size: 3.2rem;
 `;
 
-const Footer = () => <Contact>k.w.schneid@gmail.com</Contact>;
+const Footer = () => <Contact>b@binkie.town</Contact>;
 
 export default Footer;

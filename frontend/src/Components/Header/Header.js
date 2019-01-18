@@ -64,14 +64,16 @@ class Header extends Component {
     console.log(shadow);
     return (
       <HeaderCont>
-        <h2>{message}</h2>
-        <Binkie
-          style={{ textShadow: shadow }}
-          onClick={this.reRainbow}
-          onMouseOver={this.reRainbow}
-        >
-          binkie
-        </Binkie>
+        <span>
+          <h2>{message}</h2>
+          <Binkie
+            style={{ textShadow: shadow }}
+            onClick={this.reRainbow}
+            onMouseOver={this.reRainbow}
+          >
+            binkie
+          </Binkie>
+        </span>
       </HeaderCont>
     );
   }

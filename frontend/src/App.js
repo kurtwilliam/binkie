@@ -30,8 +30,6 @@ const GlobalStyle = createGlobalStyle`
     font-size:62.5%;
   }
   body {
-    background: ${props => props.theme.gradient};
-    padding:15px;
     color:${props => props.theme.main};
     font-size:2.4rem;
 
@@ -43,18 +41,11 @@ const GlobalStyle = createGlobalStyle`
   p,span,a,label,button,textarea,li,figcaption { font-family:'Work Sans', sans-serif; font-size:1.6rem; }
 `;
 
-const AppCont = styled.div`
-  width: 100%;
-  height: auto;
-  background: white;
-`;
-
 const Container = styled.div`
-  width: calc(100% - 60px);
+  width: 100%;
   max-width: 1200px;
   height: auto;
   margin: 0 auto;
-  padding-top: 100px;
 
   @media (max-width: 720px) {
     width: calc(100% - 40px);
@@ -69,14 +60,12 @@ const client = new ApolloClient({
 const App = () => (
   <ApolloProvider client={client}>
     <ThemeProvider theme={theme}>
-      <AppCont>
-        <Container>
-          <Header />
-          <Body />
-          <Footer />
-          <GlobalStyle />
-        </Container>
-      </AppCont>
+      <Container>
+        <Header />
+        <Body />
+        <Footer />
+        <GlobalStyle />
+      </Container>
     </ThemeProvider>
   </ApolloProvider>
 );
