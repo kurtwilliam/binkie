@@ -61,7 +61,6 @@ class Header extends Component {
 
   render() {
     const { message, shadow } = this.state;
-    console.log(shadow);
     return (
       <HeaderCont>
         <span>
