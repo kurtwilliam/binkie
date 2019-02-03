@@ -1,20 +1,24 @@
-import React from "react";
-import Chunk from "../../shared/Chunk";
+import React, { useEffect } from 'react';
+import Chunk from '../../shared/Chunk';
 
-import { withGesture } from "react-with-gesture";
-import { Spring, animated } from "react-spring";
+// https://itnext.io/how-to-use-plain-three-js-in-your-react-apps-417a79d926e0
 
-import HandShake from "./HandShake";
-import Hand from "./Hand";
+import HandShake from './HandShake';
+import Hand from './Hand';
 
-const LinkedIn = () => (
-  <Chunk>
-    LinkedIn
-    <HandShake>
-      <Hand />
-      <Hand />
-    </HandShake>
-  </Chunk>
-);
+const LinkedIn = () => {
+  useEffect(() => {
+    console.log('loaded');
+  }, []);
+  return (
+    <Chunk>
+      LinkedIn
+      <HandShake>
+        <Hand />
+        <Hand />
+      </HandShake>
+    </Chunk>
+  );
+};
 
 export default LinkedIn;
