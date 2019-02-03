@@ -10,11 +10,11 @@ const typeDefs = gql`
     skillz: [Skill]
     score: Int
   }
-
-  // type Mutation {
-  //   increaseScore(score: Int): Int
-  // }
 `;
+
+// type Mutation {
+//   increaseScore(score: Int): Int
+// }
 
 const resolvers = {
   Query: {
