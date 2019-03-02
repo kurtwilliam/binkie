@@ -12,7 +12,7 @@ const Body = () => (
   <Fragment>
     <Youtube />
     <Instagram />
-    <LinkedIn />
+    {/* <LinkedIn /> */}
   </Fragment>
 );
 
