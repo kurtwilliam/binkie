@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Chunk from "../../shared/Chunk";
 import axios from "axios";
-
+import Chunk from "../../shared/Chunk";
 import YouTube from "react-youtube";
+
 const spelunky = "lB_6LZLQOKs";
 const binkieId = "UCqoMPjVw7Snc9owzyg94eMA";
 
